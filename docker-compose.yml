@@ -16,8 +16,8 @@ services:
       WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
       WORDPRESS_DB_NAME: ${DB_DATABASE}
     volumes:
-      - ./src/${THEME_NAME}:/var/www/html/wp-content/themes/${THEME_NAME}
-      - ./src/${PLUGIN_NAME}:/var/www/html/wp-content/plugins/${PLUGIN_NAME}
+      - ./src/${PROJECT_NAME}/${THEME_NAME}:/var/www/html/wp-content/themes/${THEME_NAME}
+      - ./src/${PROJECT_NAME}/mu-plugins:/var/www/html/wp-content/mu-plugins
     networks:
       - dev-network
 
